@@ -13,3 +13,8 @@ def model_fn(dir):
 def predict(model, input):
     y = model.fit(input)
     return y
+
+def output_fn(input, content_type):
+    if content_type == 'json':
+        json = {'score' : input['score'] }
+        return json
