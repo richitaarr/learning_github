@@ -1,3 +1,3 @@
-FROM nvidia:tf-2.8
+FROM nvidia:tf-ngc:2.9
 
 ENV train.py
