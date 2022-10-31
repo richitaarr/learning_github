@@ -13,3 +13,8 @@ def predict(input):
     model = tf.load('...')
     y = model.fit(input)
     return y
+
+def output_fn(input, content_type):
+    if content_type == 'json':
+        json = {'score' : input['score'] }
+        return json
